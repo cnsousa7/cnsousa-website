@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
+import { useAuth } from "@/_core/hooks/useAuth";
 import {
   Zap,
   Lightbulb,
@@ -71,6 +72,8 @@ const services = [
 ];
 
 export default function Home() {
+  const { user, loading, error, isAuthenticated, logout } = useAuth();
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
@@ -93,34 +96,34 @@ export default function Home() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                   Soluções Técnicas em Elétrica e Eletrônica
                 </h1>
-              <p className="text-lg md:text-xl mb-8 opacity-95">
-                Expertise, segurança e inovação para seus projetos elétricos. Confie em profissionais qualificados com certificações NR-10 e CREA.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contato">
-                  <Button
-                    size="lg"
-                    className="bg-accent hover:bg-accent/90 text-primary font-bold"
+                <p className="text-lg md:text-xl mb-8 opacity-95">
+                  Expertise, segurança e inovação para seus projetos elétricos. Confie em profissionais qualificados com certificações NR-10 e CREA.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="/contato">
+                    <Button
+                      size="lg"
+                      className="bg-accent hover:bg-accent/90 text-primary font-bold"
+                    >
+                      Solicitar Orçamento
+                      <ArrowRight className="ml-2" size={20} />
+                    </Button>
+                  </Link>
+                  <a
+                    href="https://wa.me/5561992743428?text=Olá%2C%20gostaria%20de%20um%20orçamento%20para%20serviços%20elétricos."
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Solicitar Orçamento
-                    <ArrowRight className="ml-2" size={20} />
-                  </Button>
-                </Link>
-                <a
-                  href="https://wa.me/5561992743428?text=Olá%2C%20gostaria%20de%20um%20orçamento%20para%20serviços%20elétricos."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
-                  >
-                    Fale conosco no WhatsApp
-                  </Button>
-                </a>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
+                    >
+                      Fale conosco no WhatsApp
+                    </Button>
+                  </a>
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </section>
