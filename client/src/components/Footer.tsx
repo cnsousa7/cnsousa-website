@@ -84,17 +84,17 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <Phone size={18} className="mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-medium">(89) 99405-5190</p>
+                  <p className="font-medium">(61) 99274-3428</p>
                   <p className="text-xs opacity-80">WhatsApp disponível</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Mail size={18} className="mt-1 flex-shrink-0" />
-                <p>contato@cnsousatec.com.br</p>
+                <p>Cnsousatec@gmail.com</p>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="mt-1 flex-shrink-0" />
-                <p>Piauí, Brasil</p>
+                <p>Brasília, DF - Brasil</p>
               </div>
             </div>
           </div>

@@ -107,7 +107,7 @@ export default function Home() {
                   </Button>
                 </Link>
                 <a
-                  href="https://wa.me/5589994055190?text=Olá%2C%20gostaria%20de%20um%20orçamento%20para%20serviços%20elétricos."
+                  href="https://wa.me/5561992743428?text=Olá%2C%20gostaria%20de%20um%20orçamento%20para%20serviços%20elétricos."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -241,7 +241,7 @@ export default function Home() {
                 </Button>
               </Link>
               <a
-                href="tel:+5589994055190"
+                href="tel:+5561992743428"
                 className="inline-block"
               >
                 <Button

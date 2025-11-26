@@ -56,7 +56,7 @@ export default function Contact() {
               <div className="bg-white rounded-lg shadow-md border border-border p-6">
                 <Phone className="w-8 h-8 text-accent mb-4" />
                 <h3 className="text-xl font-bold text-primary mb-2">Telefone</h3>
-                <p className="text-muted-foreground mb-2">(89) 99405-5190</p>
+                <p className="text-muted-foreground mb-2">(61) 99274-3428</p>
                 <p className="text-sm text-muted-foreground">
                   Disponível de segunda a sexta, 8h às 18h
                 </p>
@@ -66,7 +66,7 @@ export default function Contact() {
                 <Mail className="w-8 h-8 text-accent mb-4" />
                 <h3 className="text-xl font-bold text-primary mb-2">E-mail</h3>
                 <p className="text-muted-foreground mb-2">
-                  contato@cnsousatec.com.br
+                  Cnsousatec@gmail.com
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Responderemos em até 24 horas
@@ -76,9 +76,9 @@ export default function Contact() {
               <div className="bg-white rounded-lg shadow-md border border-border p-6">
                 <MapPin className="w-8 h-8 text-accent mb-4" />
                 <h3 className="text-xl font-bold text-primary mb-2">Localização</h3>
-                <p className="text-muted-foreground mb-2">Piauí, Brasil</p>
+                <p className="text-muted-foreground mb-2">Brasília, DF - Brasil</p>
                 <p className="text-sm text-muted-foreground">
-                  Atendimento em todo o estado
+                  Atendimento em todo o Brasil
                 </p>
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-                        placeholder="(89) 99999-9999"
+                        placeholder="(61) 99999-9999"
                       />
                     </div>
 
@@ -252,10 +252,10 @@ export default function Contact() {
                     Para situações de emergência, ligue para nosso número de atendimento:
                   </p>
                   <a
-                    href="tel:+5589994055190"
+                    href="tel:+5561992743428"
                     className="text-accent font-bold text-lg hover:underline"
                   >
-                    (89) 99405-5190
+                    (61) 99274-3428
                   </a>
                 </div>
               </div>

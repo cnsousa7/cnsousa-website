@@ -47,12 +47,12 @@ export default function Header() {
           {/* Contact Info - Desktop */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+5589994055190"
+              href="tel:+5561992743428"
               className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
               title="Ligar para CNSOUSATEC"
             >
               <Phone size={18} />
-              <span className="text-sm font-medium">(89) 99405-5190</span>
+              <span className="text-sm font-medium">(61) 99274-3428</span>
             </a>
           </div>
 
@@ -80,11 +80,11 @@ export default function Header() {
             ))}
             <div className="px-4 py-2 border-t border-border mt-2">
               <a
-                href="tel:+5589994055190"
+                href="tel:+5561992743428"
                 className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
               >
                 <Phone size={18} />
-                <span className="text-sm font-medium">(89) 99405-5190</span>
+                <span className="text-sm font-medium">(61) 99274-3428</span>
               </a>
             </div>
           </nav>
@@ -93,7 +93,7 @@ export default function Header() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/5589994055190?text=Olá%2C%20gostaria%20de%20um%20orçamento%20para%20serviços%20elétricos."
+        href="https://wa.me/5561992743428?text=Olá%2C%20gostaria%20de%20um%20orçamento%20para%20serviços%20elétricos."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-all hover:scale-110 z-40"
