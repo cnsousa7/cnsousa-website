@@ -71,16 +71,26 @@ export default function Admin() {
 
     setUploading(true);
     try {
-      // In a real implementation, you would upload to S3 first
-      // For now, we'll use a placeholder URL
-      const placeholderUrl = `https://storage.example.com/${file.name}`;
-      const fileKey = `admin-uploads/${user.id}/${file.name}`;
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('userId', user.id.toString());
 
-      // Save metadata to database
+      const response = await fetch('/api/upload', {
+        method: 'POST',
+        body: formData,
+        credentials: 'include',
+      });
+
+      if (!response.ok) {
+        throw new Error('Upload failed');
+      }
+
+      const { url, key } = await response.json();
+
       await filesMutation.mutateAsync({
         fileName: file.name,
-        fileUrl: placeholderUrl,
-        fileKey: fileKey,
+        fileUrl: url,
+        fileKey: key,
         mimeType: file.type,
         fileSize: file.size,
       });

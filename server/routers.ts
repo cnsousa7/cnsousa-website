@@ -3,7 +3,17 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
-import { getApprovedTestimonials, createTestimonial, getPortfolioProjects, createPortfolioProject, createFile, getUserFiles } from "./db";
+import { 
+  getApprovedTestimonials, 
+  createTestimonial, 
+  getAllTestimonials,
+  approveTestimonial,
+  rejectTestimonial,
+  getPortfolioProjects, 
+  createPortfolioProject, 
+  createFile, 
+  getUserFiles 
+} from "./db";
 
 export const appRouter = router({
   system: systemRouter,
@@ -20,6 +30,12 @@ export const appRouter = router({
 
   testimonials: router({
     list: publicProcedure.query(() => getApprovedTestimonials()),
+    listAll: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user?.role !== 'admin') {
+        throw new Error('Unauthorized');
+      }
+      return getAllTestimonials();
+    }),
     create: protectedProcedure
       .input(z.object({
         name: z.string().min(1),
@@ -34,6 +50,22 @@ export const appRouter = router({
           ...input,
           status: 'pending',
         });
+      }),
+    approve: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input, ctx }) => {
+        if (ctx.user?.role !== 'admin') {
+          throw new Error('Unauthorized');
+        }
+        return approveTestimonial(input.id);
+      }),
+    reject: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input, ctx }) => {
+        if (ctx.user?.role !== 'admin') {
+          throw new Error('Unauthorized');
+        }
+        return rejectTestimonial(input.id);
       }),
   }),
 

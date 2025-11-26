@@ -128,3 +128,26 @@ export async function getUserFiles(userId: number) {
   if (!db) return [];
   return db.select().from(files).where(eq(files.userId, userId)).orderBy(files.uploadedAt);
 }
+
+// Testimonials admin functions
+export async function getAllTestimonials() {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(testimonials).orderBy(testimonials.createdAt);
+}
+
+export async function approveTestimonial(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error('Database not available');
+  return db.update(testimonials)
+    .set({ status: 'approved' })
+    .where(eq(testimonials.id, id));
+}
+
+export async function rejectTestimonial(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error('Database not available');
+  return db.update(testimonials)
+    .set({ status: 'rejected' })
+    .where(eq(testimonials.id, id));
+}
