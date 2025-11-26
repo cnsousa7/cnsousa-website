@@ -20,10 +20,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center gap-2 cursor-pointer">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">CN</span>
-              </div>
+            <div className="flex items-center gap-3 cursor-pointer">
+              <img
+                src="/logo-cnsousatec.jpg"
+                alt="CNSOUSATEC Logo"
+                className="h-12 w-12 rounded-lg object-cover shadow-md"
+              />
               <div className="hidden sm:block">
                 <h1 className="text-primary font-bold text-lg">CNSOUSATEC</h1>
                 <p className="text-xs text-muted-foreground">Soluções Técnicas</p>

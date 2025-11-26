@@ -9,7 +9,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">CNSOUSATEC</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="/logo-cnsousatec.jpg"
+                alt="CNSOUSATEC Logo"
+                className="h-14 w-14 rounded-lg object-cover shadow-md"
+              />
+              <h3 className="text-xl font-bold">CNSOUSATEC</h3>
+            </div>
             <p className="text-sm opacity-90 mb-4">
               Soluções Técnicas em Elétrica e Eletrônica com excelência, segurança e inovação.
             </p>

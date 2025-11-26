@@ -79,10 +79,20 @@ export default function Home() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-20 md:py-32">
           <div className="container">
-            <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Soluções Técnicas em Elétrica e Eletrônica
-              </h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Logo */}
+              <div className="flex justify-center md:justify-start">
+                <img
+                  src="/logo-cnsousatec.jpg"
+                  alt="CNSOUSATEC Logo"
+                  className="h-64 w-64 rounded-xl object-cover shadow-2xl"
+                />
+              </div>
+              {/* Content */}
+              <div>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                  Soluções Técnicas em Elétrica e Eletrônica
+                </h1>
               <p className="text-lg md:text-xl mb-8 opacity-95">
                 Expertise, segurança e inovação para seus projetos elétricos. Confie em profissionais qualificados com certificações NR-10 e CREA.
               </p>
@@ -110,6 +120,7 @@ export default function Home() {
                   </Button>
                 </a>
               </div>
+            </div>
             </div>
           </div>
         </section>
