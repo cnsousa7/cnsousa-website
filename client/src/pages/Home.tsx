@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
-import { useAuth } from "@/_core/hooks/useAuth";
+
 import {
   Zap,
   Lightbulb,
@@ -72,7 +72,6 @@ const services = [
 ];
 
 export default function Home() {
-  const { user, loading, error, isAuthenticated, logout } = useAuth();
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
